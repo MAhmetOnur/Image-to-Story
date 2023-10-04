@@ -11,8 +11,8 @@ from langchain.prompts import ChatPromptTemplate, HumanMessagePromptTemplate
 
 
 load_dotenv()
-openai.api_key = os.getenv("OPENAI_API_KEY")
-HUGGINGFACEHUB_API_TOKEN = os.getenv("HUGGING_FACE_API_KEY_IMAGE_TO_STORY")
+openai.api_key =  st.secrets["OPENAI_API_KEY"]
+HUGGINGFACEHUB_API_TOKEN = st.secrets["HUGGING_FACE_API_KEY"]
 
 
 def image2text(url):
